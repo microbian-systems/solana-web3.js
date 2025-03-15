@@ -1,3 +1,9 @@
+# PLEASE READ: This repo no longer contains the implementation for `@solana/web3.js`
+
+This repo still exists in archived form, but the maintained version has now relocated to: https://github.com/anza-xyz/solana-web3.js
+
+--
+
 [![npm][npm-image]][npm-url]
 [![npm-downloads][npm-downloads-image]][npm-url]
 [![semantic-release][semantic-release-image]][semantic-release-url]
@@ -12,7 +18,10 @@
 [semantic-release-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
 
-# Solana JavaScript SDK
+> [!NOTE]
+> This is the maintenance branch for the 1.x line of `@solana/web3.js`. You can find the successor to this library [here](https://l.anza.xyz/s/js-sdk-repo).
+
+# Solana JavaScript SDK (v1.x)
 
 Use this to interact with accounts and programs on the Solana network through the Solana [JSON RPC API](https://solana.com/docs/rpc).
 
@@ -21,7 +30,7 @@ Use this to interact with accounts and programs on the Solana network through th
 ### For use in Node.js or a web application
 
 ```
-$ npm install --save @solana/web3.js
+$ npm install --save @solana/web3.js@1
 ```
 
 ### For use in a browser, without a build system
@@ -36,8 +45,8 @@ $ npm install --save @solana/web3.js
 
 ## Documentation and examples
 
--   [The Solana Cookbook](https://solanacookbook.com/) has extensive task-based documentation using this library.
--   For more detail on individual functions, see the [latest API Documentation](https://solana-labs.github.io/solana-web3.js)
+- [The Solana Cookbook](https://solanacookbook.com/) has extensive task-based documentation using this library.
+- For more detail on individual functions, see the [latest API Documentation](https://solana-labs.github.io/solana-web3.js)
 
 ## Getting help
 
@@ -45,45 +54,29 @@ Have a question or a problem? Check the [Solana Stack Exchange](https://solana.s
 
 Include:
 
--   A detailed description of what you're trying to achieve
--   Source code, if possible
--   The text of any errors you encountered, with stacktraces if available
+- A detailed description of what you're trying to achieve
+- Source code, if possible
+- The text of any errors you encountered, with stacktraces if available
 
 ## Compatibility
 
 This library requires a JavaScript runtime that supports [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) and the [exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation). Both are supported in the following runtimes:
 
--   Browsers, by [release date](https://caniuse.com/bigint):
-    -   Chrome: May 2018
-    -   Firefox: July 2019
-    -   Safari: September 2020
-    -   Mobile Safari: September 2020
-    -   Edge: January 2020
-    -   Opera: June 2018
-    -   Samsung Internet: April 2019
--   Runtimes, [by version](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt):
-    -   Deno: >=1.0
-    -   Node: >=10.4.0
--   React Native:
-    -   \>=0.7.0 using the [Hermes](https://reactnative.dev/blog/2022/07/08/hermes-as-the-default) engine ([integration guide](https://solanacookbook.com/integrations/react-native.html#how-to-use-solana-web3-js-in-a-react-native-app)):
+- Browsers, by [release date](https://caniuse.com/bigint):
+  - Chrome: May 2018
+  - Firefox: July 2019
+  - Safari: September 2020
+  - Mobile Safari: September 2020
+  - Edge: January 2020
+  - Opera: June 2018
+  - Samsung Internet: April 2019
+- Runtimes, [by version](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt):
+  - Deno: >=1.0
+  - Node: >=10.4.0
+- React Native:
+  - \>=0.7.0 using the [Hermes](https://reactnative.dev/blog/2022/07/08/hermes-as-the-default) engine ([integration guide](https://solanacookbook.com/integrations/react-native.html#how-to-use-solana-web3-js-in-a-react-native-app)):
 
 ## Development environment setup
-
-### Installing node modules
-
-To install the modules locally, use `pnpm`.
-
-If you don't have `pnpm` installed:
-
-```shell
-$ npm install pnpm
-```
-
-To install the node modules:
-
-```shell
-$ pnpm install
-```
 
 ### Testing
 
@@ -111,19 +104,6 @@ To start the test validator and run all of the integration tests in live mode:
 $ cd packages/library-legacy
 $ npm run test:live-with-test-validator
 ```
-
-### Speed up build times with remote caching
-
-Cache build artifacts remotely so that you, others, and the CI server can take advantage of each others' build efforts.
-
-1. Log the Turborepo CLI into the Solana Vercel account
-    ```shell
-    pnpm turbo login
-    ```
-2. Link the repository to the remote cache
-    ```shell
-    pnpm turbo link
-    ```
 
 ## Contributing
 
